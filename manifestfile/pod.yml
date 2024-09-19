@@ -1,0 +1,17 @@
+
+apiVersion:  v1  #acts a manuall to your system
+kind: Pod
+metadata:  #like a tag
+        name: mypod1
+spec:
+ containers:
+    - name: mypod-cont1
+      image: nginx:latest
+      resources: 
+          requests:
+            cpu: "50m"
+            memory: "100Mi"        
+      ports:  
+        - name: http
+          containerPort: 80
+          protocol: TCP
